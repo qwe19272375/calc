@@ -11,6 +11,8 @@ $(document).ready(function(){
 	var number = "";
     var newnumber = "";
     var operator = "";
+    var radix = "10";
+    var newradix = "";
     var totaldiv = $("#total");
     totaldiv.text("0");
     $("#numbers a").not("#clear,#clearall").click(function(){
@@ -24,6 +26,12 @@ $(document).ready(function(){
 		number = "";
 		totaldiv.text("0");
     });
+    $("#radix a").click(function(){
+        newradix = $(this).attr("id");
+        totaldiv.text(parseInt(totaldiv.text(), parseInt(radix, 10)).toString(newradix));
+        radix = newradix;
+        newradix = "";
+    });
     $("#clear,#clearall").click(function(){
 		number = "";
 		totaldiv.text("0");
@@ -31,16 +39,15 @@ $(document).ready(function(){
 			newnumber = "";
 		}
     });
-    //Add your last .click() here!
     $("#equals").click(function(){
     	if (operator === "+"){
-    		number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(10);
+    		number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(parseInt(radix,10));
     	} else if (operator === "-"){
-    		number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(10);
-    	} else if (operator === "กา"){
-    		number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(10);
-    	} else if (operator === "กั"){
-    		number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
+    		number = (parseInt(newnumber, 10) - parseInt(number,10)).toString(parseInt(radix,10));
+    	} else if (operator === "/"){
+    		number = (parseInt(newnumber, 10) / parseInt(number,10)).toString(parseInt(radix,10));
+    	} else if (operator === "*"){
+    		number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(parseInt(radix,10));
     	}
     	totaldiv.text(number);
     	testNumLength(number);
