@@ -7,18 +7,22 @@ body, div, a {
 a {
     text-align: center;
     margin: 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
-	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	background: -webkit-gradient(linear, left top, left bottom, from(#D72D72), to(#CA537F));
+	background: -moz-linear-gradient(top, #D72D72, #CA537F);
 	border-radius: 10px;
 }
 
+a:not(total){
+    color: #EFCCD9;
+}
+
 a:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
-    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED); 
+    background: -webkit-gradient(linear, left top, left bottom, from(#C32C6A), to(#C54977));
+    background: -moz-linear-gradient(top,  #C32C6A,  #C54977); 
 }
 
 #calculator {
-	background-color: #999;
+	background-color: #EEBCB4;
 	width: 310px;
 	height: 460px;
 	border: 3px black solid;
@@ -49,7 +53,6 @@ a:hover{
     height: 45px;
     padding-top: 5px;
     float: left;
-    color: black;
     font-size: 30px;
     text-align: center;
     margin: 5px 8px;
@@ -69,7 +72,6 @@ a:hover{
 	height: 50px;
 	float: right;
 	text-decoration: none;
-	color: black;
 	text-align: center;
 	font-size: 39px;
 	padding: 2px;
@@ -82,7 +84,6 @@ a:hover{
 	height: 50px;
 	float: left;
 	text-decoration: none;
-	color: black;
 	text-align: center;
 	font-size: 32pt;
 	padding: 10px;
