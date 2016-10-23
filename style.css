@@ -4,6 +4,19 @@ body, div, a {
     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-align: center;
+    margin: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	border-radius: 10px;
+}
+
+a:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
+    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED); 
+}
+
 #calculator {
 	background-color: #999;
 	width: 310px;
@@ -40,9 +53,6 @@ body, div, a {
     font-size: 30px;
     text-align: center;
     margin: 5px 8px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
-	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
-	border-radius: 10px;
 }
 #numbers, #operators {
 	margin: auto;	
@@ -64,9 +74,6 @@ body, div, a {
 	font-size: 39px;
 	padding: 2px;
 	margin: 5px 10px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
-	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
-	border-radius: 10px;
 }
 
 #numbers a {
@@ -79,14 +86,6 @@ body, div, a {
 	text-align: center;
 	font-size: 32pt;
 	padding: 10px;
-	margin: 5px 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
-	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
-	border-radius: 10px;
+	margin: 5px;
 }
 
-a:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
-    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
-}
