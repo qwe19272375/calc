@@ -7,18 +7,18 @@ body, div, a {
 a {
     text-align: center;
     margin: 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
-	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	background: -webkit-gradient(linear, left top, left bottom, from(#B5EAF2), to(#DFF1F1));
+	background: -moz-linear-gradient(top, #B5EAF2, #DFF1F1);
 	border-radius: 10px;
 }
 
 a:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
-    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED); 
+    background: -webkit-gradient(linear, left top, left bottom, from(#B5EAF2), to(#76D0E0));
+    background: -moz-linear-gradient(top,  #B5EAF2,  #76D0E0); 
 }
 
 #calculator {
-	background-color: #999;
+	background-color: #669DB2;
 	width: 310px;
 	height: 460px;
 	border: 3px black solid;
