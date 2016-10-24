@@ -29,6 +29,14 @@ a:hover{
 	border-radius: 10px;
 }
 
+#header {
+    width: 310px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 30px;
+    text-align: center;
+}
+
 #total {
     height: 70px;
     width: 300px;
