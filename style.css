@@ -1,7 +1,9 @@
-body, div, a {
-    padding:0;
-    margin:0;
-    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+body,
+div,
+a {
+    padding: 0;
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -30,8 +32,8 @@ a:hover{
 #total {
     height: 70px;
     width: 300px;
-    margin:auto;
-    background-color:white;
+    margin: auto;
+    background-color: white;
     margin-bottom: 5px;
     text-align: right;
     font-size: 60px;
@@ -43,19 +45,18 @@ a:hover{
     height: 60px;
 }
 
-#radix a{
+#radix a {
     display: block;
     width: 60px;
     height: 45px;
     padding-top: 5px;
     float: left;
-    color: black;
     font-size: 30px;
-    text-align: center;
-    margin: 5px 8px;
 }
-#numbers, #operators {
-	margin: auto;	
+
+#numbers,
+#operators {
+    margin: auto;
 }
 
 #numbers {
@@ -64,28 +65,72 @@ a:hover{
 }
 
 #operators a {
-	display: block;
-	width: 45px;
-	height: 50px;
-	float: right;
-	text-decoration: none;
-	color: black;
-	text-align: center;
-	font-size: 39px;
-	padding: 2px;
-	margin: 5px 10px;
+    display: block;
+    width: 45px;
+    height: 50px;
+    float: right;
+    text-decoration: none;
+    text-align: center;
+    font-size: 39px;
+    padding: 2px;
+    margin: 5px 10px;
 }
 
 #numbers a {
-	display: block;
-	width: 50px;
-	height: 50px;
-	float: left;
-	text-decoration: none;
-	color: black;
-	text-align: center;
-	font-size: 32pt;
-	padding: 10px;
-	margin: 5px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    font-size: 32pt;
+    padding: 10px;
 }
 
+#rad {
+    height: 100px;
+    width: 45px;
+    background-color: white;
+    text-align: left;
+    font-size: 20px;
+    padding: 0 5px;
+    float: left;
+    line-height: 25px;
+}
+
+#HEX,
+#DEC,
+#OCT,
+#BIN {
+    height: 25px;
+    width: 245px;
+    background-color: white;
+    text-align: left;
+    font-size: 20px;
+    padding: 0 5px;
+    float: left;
+}
+
+#topbutton {
+    height: 120px;
+    width: 310px;
+    float: left;
+    margin-top: 10px;
+}
+
+#topbutton a {
+    display: block;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    padding: 2px;
+    margin: 5px 6px;
+}
+
+#mod a {
+    font-size: 24px;
+}
