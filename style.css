@@ -9,18 +9,22 @@ a {
 a {
     text-align: center;
     margin: 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#B5EAF2), to(#DFF1F1));
-	background: -moz-linear-gradient(top, #B5EAF2, #DFF1F1);
+	background: -webkit-gradient(linear, left top, left bottom, from(#D72D72), to(#CA537F));
+	background: -moz-linear-gradient(top, #D72D72, #CA537F);
 	border-radius: 10px;
 }
 
-a:hover{
-    background: -webkit-gradient(linear, left top, left bottom, from(#B5EAF2), to(#76D0E0));
-    background: -moz-linear-gradient(top,  #B5EAF2,  #76D0E0); 
+a:not(total) {
+    color: #EFCCD9;
+}
+
+a:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#C32C6A), to(#C54977));
+    background: -moz-linear-gradient(top,  #C32C6A,  #C54977); 
 }
 
 #calculator {
-	background-color: #669DB2;
+	background-color: #EEBCB4;
 	width: 310px;
 	height: 630px;
 	border: 3px black solid;
