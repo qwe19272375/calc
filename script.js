@@ -9,7 +9,12 @@ $(document).ready(function() {
         }
     };
     var number = "";
+    var debug = $("#debug");
+    $("#calculator").click(function() {
+        debug.text(newnumber);
+    });
     var newnumber = "";
+    var vsign = "";
     var operator = "";
     var totaldiv = $("#total");
     var hexdiv = $("#HEX");
@@ -21,45 +26,83 @@ $(document).ready(function() {
     decdiv.text("0");
     octdiv.text("0");
     bindiv.text("0");
-    $("#numbers a").not("#clear,#clearall").click(function() {
+    $("#numbers a").not("#clear,#clearentry").click(function() {
         number += $(this).text();
-        totaldiv.text(number);
+        totaldiv.text(vsign + number);
         testNumLength(number);
     });
-    $("#operators a").not("#equals").click(function() {
-        operator = $(this).text();
-        newnumber = number;
-        number = "";
-        totaldiv.text("0");
+    $("#operators a,#mod").not("#equals").click(function() {
+        if (number === "") {
+            if ($(this).attr("id") === "mod") {
+                operator = "%";
+            } else {
+                operator = $(this).text();
+            }
+        } else {
+            newnumber += operator + vsign + number;
+            totaldiv.text(eval(newnumber));
+            number = "";
+            if ($(this).attr("id") === "mod") {
+                operator = "%";
+            } else {
+                operator = $(this).text();
+            }
+            vsign = "";
+        }
     });
-    $("#clear,#clearall").click(function() {
+    $("#clear,#clearentry").click(function() {
         number = "";
-        totaldiv.text("0");
-        hexdiv.text("0");
-        decdiv.text("0");
-        octdiv.text("0");
-        bindiv.text("0");
-        if ($(this).attr("id") === "clearall") {
+        vsign = "";
+        operator = "";
+        totaldiv.text(eval(newnumber));
+        if ($(this).attr("id") === "clear") {
             newnumber = "";
+            totaldiv.text("0");
+            hexdiv.text("0");
+            decdiv.text("0");
+            octdiv.text("0");
+            bindiv.text("0");
         }
     });
     $("#equals").click(function() {
-        if (operator === "+") {
-            number = (parseInt(number, 10) + parseInt(newnumber, 10)).toString(10);
-        } else if (operator === "-") {
-            number = (parseInt(newnumber, 10) - parseInt(number, 10)).toString(10);
-        } else if (operator === "/") {
-            number = (parseInt(newnumber, 10) / parseInt(number, 10)).toString(10);
-        } else if (operator === "*") {
-            number = (parseInt(newnumber, 10) * parseInt(number, 10)).toString(10);
+        if (number !== "") {
+            number = eval(newnumber + operator + vsign + number);
+            totaldiv.text(number);
+            hexdiv.text(parseInt(number, 10).toString(16));
+            decdiv.text(number);
+            octdiv.text(parseInt(number, 10).toString(8));
+            bindiv.text(parseInt(number, 10).toString(2));
+            testNumLength(number);
+            newnumber = number;
+            number = "";
+            operator = "";
+            vsign = "";
         }
-        totaldiv.text(number);
-        hexdiv.text(parseInt(number, 10).toString(16));
-        decdiv.text(number);
-        octdiv.text(parseInt(number, 10).toString(8));
-        bindiv.text(parseInt(number, 10).toString(2));
-        testNumLength(number);
-        number = "";
-        newnumber = "";
     });
+    $("#sign").click(function() {
+        if (vsign === "") {
+            vsign = "-";
+        } else {
+            vsign = "";
+        }
+        totaldiv.text(vsign + number);
+    });
+    $("#larr").click(function() {
+        if (number !== "") {
+            number = number.substring(0, number.length - 1);
+            totaldiv.text(vsign + number)
+        }
+    });
+    $("#alphabet a").click(function() {
+        if (number.startsWith("0x")) {
+            number += $(this).text();
+        } else {
+            number = "0x" + number + $(this).text();
+        }
+        totaldiv.text(vsign + number);
+    });
+    $("#0b").click(function(){
+    	number = "0b" + number;
+        totaldiv.text(number);
+    })
 });

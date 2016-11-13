@@ -9,9 +9,9 @@ a {
 a {
     text-align: center;
     margin: 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#D72D72), to(#CA537F));
-	background: -moz-linear-gradient(top, #D72D72, #CA537F);
-	border-radius: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#D72D72), to(#CA537F));
+    background: -moz-linear-gradient(top, #D72D72, #CA537F);
+    border-radius: 10px;
 }
 
 a:not(total) {
@@ -20,17 +20,17 @@ a:not(total) {
 
 a:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#C32C6A), to(#C54977));
-    background: -moz-linear-gradient(top,  #C32C6A,  #C54977); 
+    background: -moz-linear-gradient(top, #C32C6A, #C54977);
 }
 
 #calculator {
-	background-color: #EEBCB4;
-	width: 310px;
-	height: 630px;
-	border: 3px black solid;
-	margin: 10px auto;
-	padding: 5px;
-	border-radius: 10px;
+    background-color: #EEBCB4;
+    width: 310px;
+    height: 680px;
+    border: 3px black solid;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 #header {
